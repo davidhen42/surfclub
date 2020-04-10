@@ -1,0 +1,109 @@
+{% load static %}
+<html>
+    <head>
+        <title>Trinity Park Surf Club</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <script src="https://kit.fontawesome.com/c01d8222cb.js" crossorigin="anonymous"></script>
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/surfwatch.css' %}">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script type='text/javascript'></script>    
+
+
+    </head>
+    <body>
+        <div class="page-header" id="page-header">
+            <h1>Trinity Park Surf Club</h1>
+            <br>
+        
+            <div class="settingsbar">
+                <span class="buttonlabel"> Location: </span>
+                <template v-for="location in locations">
+                    <span class = "filterbutton" id="locationbutton" :name="location" @click="setFilter" :class="{'buttonclicked': filterLocation===location}">[[location]]</span>
+                </template>
+
+
+                <span class="buttonlabel">Day: </span>
+                <template v-for="day in days">
+                    <span class = "filterbutton" id="daybutton" :name="day" @click="setFilter" :class="{'buttonclicked': filterDay===day}">[[day]]</span>
+                </template>
+
+                <span class="buttonlabel">Time: </span>
+                <template v-for="time in times">
+                    <span class = "filterbutton" id="timebutton" :name="time" @click="setFilter" :class="{'buttonclicked': filterTime===time}">[[time]]</span>
+                </template>
+
+
+            </div>
+
+        </div>
+
+        <div class="reportcard">
+            <div class="spotname"> Carolina Beach </div>
+
+            <div class="wavesize"> 
+                <div class="wavesize">2-3 feet</div>
+                <div class="period">7 sec</div>
+            </div>
+            
+            <div class="camerablock">
+                <i class="fas fa-video" id="cameraicon"></i>
+                <p class="iconcaption">SurfChex</p>
+            </div>
+
+            <div class="starsblock">
+                <i class="far fa-star" id="cameraicon"></i>
+                <p class="iconcaption">2 Stars</p>
+            </div>
+            
+            <div class="windblock">
+                <i class="far fa-flag" id="cameraicon"></i>
+                <p class="iconcaption">7 MPH NW</p>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var app = new Vue({
+              delimiters: ['[[', ']]'],
+              el: '#page-header',
+              data: {
+                  filterLocation: '',
+                  filterDay: '',
+                  filterTime: '',
+                  locations: ['Airlie', 'Banks'],
+                  days: ['Fri', 'Sat', 'Sun'],
+                  times: ['6AM', '9AM', '12PM', '3PM', '6PM']
+              },
+              methods: {
+                  setFilter (event) {
+                      if(event.target.id==="locationbutton"){
+                        this.filterLocation = (this.filterLocation===event.target.getAttribute('name')) ? '' : event.target.getAttribute('name');
+                      } else if(event.target.id==="daybutton"){
+                        this.filterDay = (this.filterDay===event.target.getAttribute('name')) ? '' : event.target.getAttribute('name');
+                      } else if(event.target.id==="timebutton"){
+                        this.filterTime = (this.filterTime===event.target.getAttribute('name')) ? '' : event.target.getAttribute('name');
+                        }
+                  }
+              }
+
+            });
+          </script>
+        
+</html>

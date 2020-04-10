@@ -1,0 +1,5 @@
+pink: #F7C3D0
+turquoise: #8DE5E8
+light-blue: #ACEDFF
+royal-blue: #89BBFE
+gray-blue: #6F8AB7

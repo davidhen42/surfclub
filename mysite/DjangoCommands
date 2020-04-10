@@ -1,0 +1,37 @@
+Starting the web server
+You need to be in the directory that contains the manage.py file (the djangogirls directory). In the console, we can start the web server by running python manage.py runserver:
+
+(myvenv) ~/djangogirls$ python manage.py runserver
+
+
+Creating an application
+To keep everything tidy, we will create a separate application inside our project. It is very nice to have everything organized from the very beginning. To create an application we need to run the following command in the console (from djangogirls directory where manage.py file is):
+
+Mac OS X and Linux:
+(myvenv) ~/djangogirls$ python manage.py startapp blog
+
+
+
+
+Create tables for models in your database
+The last step here is to add our new model to our database. First we have to make Django know that we have some changes in our model. (We have just created it!) Go to your console window and type python manage.py makemigrations blog. It will look like this:
+
+command-line
+(myvenv) ~/djangogirls$ python manage.py makemigrations blog
+Migrations for 'blog':
+  blog/migrations/0001_initial.py:
+  - Create model Post
+
+
+Django prepared a migration file for us that we now have to apply to our database. Type python manage.py migrate blog and the output should be as follows:
+
+command-line
+(myvenv) ~/djangogirls$ python manage.py migrate blog
+Operations to perform:
+  Apply all migrations: blog
+Running migrations:
+  Applying blog.0001_initial... OK
+
+SuperUser:
+username: supersurfer (superuser on the real one)
+password: the usual

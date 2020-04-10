@@ -1,0 +1,158 @@
+/* DAVID CODE */
+.page-header {
+    background-color: #F7C3D0;
+    margin-top: 0;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 40pt;
+}
+
+.buttonlabel, .filterbutton {
+    font-family: 'Lobster', cursive;
+    color: white
+}
+
+.buttonlabel {
+    margin-left: 14px;
+    font-size: 14pt;
+
+}
+
+.filterbutton {
+    padding: 4px 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.buttonclicked {
+    color: white;
+    border: 2px solid #ACEDFF;
+}
+
+.reportcard {
+    color:black;
+    width: 500px;
+    height:300px;
+    border: 8px solid #ACEDFF;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.spotname {
+    color: #F7C3D0;
+    grid-area: 1 / 1 / 2 / 4;
+    font-family: 'Lobster', cursive;
+    font-size: 36pt;
+    padding-top: 5%;
+    padding-left: 10%;
+
+}
+
+.wavesize {
+    grid-area: 1 / 4 / 2 / 7;
+    color: black;
+    font-family: 'Lobster', cursive;
+    font-size: 36pt;
+    padding-top: 12px;
+    padding-right: 15%;
+    text-align: right;
+}
+
+.period {
+    font-size: 24pt;
+    padding-right: 15%;
+    text-align: center;
+    
+}
+
+.camerablock {
+    font-size: 8pt;
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+#cameraicon {
+    color: #ACEDFF;
+    font-size: 60;
+    padding-top: 40px;
+    padding-left: 45px;
+}
+
+.starsblock {
+    font-size: 60;
+    grid-area: 2 / 3 / 3 / 5;
+}
+
+.windblock {
+    font-size: 40;
+    grid-area: 2 / 5 / 3 / 7;
+}
+
+.iconcaption {
+    font-size: 12pt;
+    color: black;
+    font-family: 'Lobster', cursive;
+    padding-left: 45px;
+    text-align: left;
+
+}
+
+
+
+
+
+
+/* Boilerplate Code
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a, .post h2 a:visited {
+    color: #000000;
+}
