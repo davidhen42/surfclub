@@ -1,6 +1,6 @@
 /* DAVID CODE */
 .page-header {
-    background-color: #F7C3D0;
+    background-color: green;
     margin-top: 0;
     padding: 10px 10px 10px 10px;
     text-align: center;
@@ -75,7 +75,7 @@ h1 {
     font-size: 24pt;
     padding-right: 15%;
     text-align: center;
-    
+
 }
 
 .camerablock {
